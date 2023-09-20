@@ -1,0 +1,2 @@
+# asomegame
+for educational propuse.
