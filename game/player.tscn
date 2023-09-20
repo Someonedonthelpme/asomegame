@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://di73bxq185bmw"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_20aan"]
+[ext_resource type="Texture2D" uid="uid://bx556qwkyx2qo" path="res://access/Fantasy Battlers - Free/Original size/10.png" id="2_2bnfx"]
+
+[node name="player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_20aan")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_2bnfx")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(300, 0)
