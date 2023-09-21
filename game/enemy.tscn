@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://bobd8yqqwgsk8"]
+[gd_scene load_steps=3 format=3 uid="uid://bobd8yqqwgsk8"]
 
+[ext_resource type="Script" path="res://enemy.gd" id="1_bbqjr"]
 [ext_resource type="Texture2D" uid="uid://dfs85sjllsr8u" path="res://access/Fantasy Battlers - Free/Original size/09b.png" id="1_sb3ra"]
 
 [node name="enemy" type="CharacterBody2D"]
+script = ExtResource("1_bbqjr")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_sb3ra")

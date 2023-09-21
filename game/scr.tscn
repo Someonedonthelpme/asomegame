@@ -1,38 +1,226 @@
-[gd_scene load_steps=6 format=3 uid="uid://02vr7c63b3rv"]
+[gd_scene load_steps=7 format=3 uid="uid://02vr7c63b3rv"]
 
 [ext_resource type="Script" path="res://scr.gd" id="1_k5tts"]
-[ext_resource type="Texture2D" uid="uid://ymok7mbul08f" path="res://access/tree.png" id="3_ga271"]
+[ext_resource type="PackedScene" uid="uid://cvgewf4qmh6ex" path="res://scene.tscn" id="2_xchac"]
 [ext_resource type="PackedScene" uid="uid://di73bxq185bmw" path="res://player.tscn" id="3_uu3bo"]
-[ext_resource type="Texture2D" uid="uid://bxyam0vdgjglf" path="res://access/blank.png" id="4_4umgc"]
 [ext_resource type="PackedScene" uid="uid://bobd8yqqwgsk8" path="res://enemy.tscn" id="5_a0tkp"]
+
+[sub_resource type="FontFile" id="FontFile_j6v3s"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/16/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/16/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/17/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/17/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/18/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/18/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/19/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/19/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/20/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/20/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/21/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/21/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/22/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/22/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+cache/0/23/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/23/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/24/0/ascent = 0.0
+cache/0/24/0/descent = 0.0
+cache/0/24/0/underline_position = 0.0
+cache/0/24/0/underline_thickness = 0.0
+cache/0/24/0/scale = 1.0
+cache/0/24/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/24/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/25/0/ascent = 0.0
+cache/0/25/0/descent = 0.0
+cache/0/25/0/underline_position = 0.0
+cache/0/25/0/underline_thickness = 0.0
+cache/0/25/0/scale = 1.0
+cache/0/25/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/25/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/26/0/ascent = 0.0
+cache/0/26/0/descent = 0.0
+cache/0/26/0/underline_position = 0.0
+cache/0/26/0/underline_thickness = 0.0
+cache/0/26/0/scale = 1.0
+cache/0/26/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/26/0/kerning_overrides/27/0 = Vector2(0, 0)
+cache/0/27/0/ascent = 0.0
+cache/0/27/0/descent = 0.0
+cache/0/27/0/underline_position = 0.0
+cache/0/27/0/underline_thickness = 0.0
+cache/0/27/0/scale = 1.0
+cache/0/27/0/kerning_overrides/16/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/17/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/18/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/19/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/20/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/21/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/22/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/23/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/24/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/25/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/26/0 = Vector2(0, 0)
+cache/0/27/0/kerning_overrides/27/0 = Vector2(0, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e6ylv"]
+line_spacing = 28.0
+font = SubResource("FontFile_j6v3s")
+font_size = 27
+font_color = Color(0, 0.266667, 0.8, 1)
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_k5tts")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="bg01" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-motion_scale = Vector2(0, 1)
-motion_offset = Vector2(400, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/bg01"]
-texture = ExtResource("4_4umgc")
-
-[node name="tree" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-motion_mirroring = Vector2(1600, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/tree"]
-texture = ExtResource("3_ga271")
-
-[node name="tree2" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-position = Vector2(800, 0)
-motion_mirroring = Vector2(1600, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/tree2"]
-texture = ExtResource("3_ga271")
+[node name="scene" parent="." instance=ExtResource("2_xchac")]
 
 [node name="player" parent="." instance=ExtResource("3_uu3bo")]
 
@@ -41,12 +229,42 @@ texture = ExtResource("3_ga271")
 [node name="Endturn" type="Button" parent="CanvasLayer"]
 texture_filter = 1
 offset_left = 280.0
+offset_top = 500.0
 offset_right = 520.0
-offset_bottom = 80.0
+offset_bottom = 580.0
 text = "END TURN"
+
+[node name="debug" type="Button" parent="CanvasLayer"]
+offset_left = 190.0
+offset_top = 500.0
+offset_right = 270.0
+offset_bottom = 580.0
+text = "WIN!"
 
 [node name="enemy" parent="." instance=ExtResource("5_a0tkp")]
 position = Vector2(800, 0)
 motion_mode = 1
 
+[node name="turnbox" type="Label" parent="."]
+offset_left = 250.0
+offset_top = -300.0
+offset_right = 331.0
+offset_bottom = -235.0
+text = "Turn: 0
+"
+label_settings = SubResource("LabelSettings_e6ylv")
+
+[node name="play" type="Button" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 260.0
+offset_top = -40.0
+offset_right = 340.0
+offset_bottom = 40.0
+grow_vertical = 2
+text = "PLAY"
+
 [connection signal="pressed" from="CanvasLayer/Endturn" to="." method="_on_endturn_pressed"]
+[connection signal="pressed" from="CanvasLayer/debug" to="." method="_on_debug_pressed"]
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
